@@ -1,0 +1,19 @@
+.scrolled-table {
+    height: 250px;
+}
+
+.center-text {
+    text-align:center;
+}
+
+/*
+#submittedFlightsTable tr:hover
+{
+    background-color: #808080;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+*/

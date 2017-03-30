@@ -1,0 +1,23 @@
+@(view: String)(content: Html)(implicit request: RequestHeader)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InsightEdge Demo</title>
+
+        <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/main.css")" />
+            @helper.javascriptRouter("jsRoutes")(
+                routes.javascript.KafkaEndpoint.submitFlight,
+                routes.javascript.FlightEndpoint.getLastFlights
+        )
+        <script type="text/javascript" src="@routes.Assets.at("js/flights.js")"></script>
+    </head>
+    <body>
+        @nav()
+        @content
+    </body>
+</html>
